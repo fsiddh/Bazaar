@@ -19,7 +19,7 @@ def index(request):
         n = len(prod)
         nSlides = n // 4 + ceil((n / 4) - (n // 4))
         allProds.append([prod, range(1, nSlides), nSlides])
-    
+
     # params = {'no_of_slides':nSlides, 'range': range(1,nSlides),'product': products}
     # allProds = [[products, range(1, nSlides), nSlides],
     #             [products, range(1, nSlides), nSlides]]
@@ -30,16 +30,16 @@ def about(request):
     return render(request, 'shop/about.html')
 
 def contact(request):
-    return HttpResponse("We are at contact")
+    return render(request, 'shop/contact.html')
 
 def tracker(request):
-    return HttpResponse("We are at tracker")
+    return render(request, 'shop/tracker.html')
 
 def search(request):
-    return HttpResponse("We are at search")
+    return render(request, 'shop/search.html')
 
 def productView(request):
-    return HttpResponse("We are at product view")
+    return render(request, 'shop/prodView.html')
 
 def checkout(request):
-    return HttpResponse("We are at checkout")
+    return render(request, 'shop/checkout.html')
